@@ -3,15 +3,10 @@ theme: default
 colorSchema: light
 background: false
 class: text-center
-highlighter: shiki
-lineNumbers: true
-shikiConfig:
-  theme: 'balanced-dark'
 drawings:
   persist: false
 transition: slide-left
-title: 小さな自動化をチームで育てるための設計と運用
-mdc: true
+title: 2026年のOSS活動まとめ
 fonts:
   provider: none
   sans: 'Noto Sans JP'
@@ -19,21 +14,21 @@ fonts:
 ---
 
 <CoverSlide
-  title="小さな自動化をチームで育てるための設計と運用を、型定義の生成を例に考える"
-  event="イベント名"
+  title="2026年 OSS contribution まとめ"
   author="fujitani sora"
-  background="cyanTop"
 />
 
 <!--
-スピーカーノート: ここにプレゼンテーションノートを書きます
+目安 20秒
+
+今年作ったものと、ほかのOSSで取り組んだことを紹介します。
+数字は2026年11月24日時点です。
 -->
 
 ---
 
 <ProfileSlide
   name="fujitani sora"
-  affiliation="toridori inc engineer"
   x="sorafujitani"
   github="sorafujitani"
   website="https://sorafujitani.me/"
@@ -45,174 +40,95 @@ fonts:
 
 ---
 
-# 見出しスライド
+# rfmt
 
-## サブ見出し
+Rustの高速なRuby Code Formatter
 
-通常のテキストと箇条書きの例です。
+- https://github.com/sorafujitani/rfmt
+- RubyGemsで累計37,629ダウンロード
+- [Short Ruby Newsletter #165](https://newsletter.shortruby.com/p/edition-165) で紹介
+- [2.0.0.beta1](https://github.com/sorafujitani/rfmt/releases/tag/v2.0.0.beta1) を最新で公開
 
-- <EmojiText emoji="✨">リスト項目1</EmojiText>
-- <EmojiText emoji="🎨">リスト項目2</EmojiText>
-  - ネストしたリスト
-  - ネストしたリスト2
-- <EmojiText emoji="🚀">リスト項目3</EmojiText>
+<!--
+目安 1分
 
----
+Rubyのコードを一定のスタイルに整えるツールです。
+今年は2.0のベータ版を公開しました。1月にはShort Ruby Newsletterの新着gem欄で紹介され、RubyGemsの累計ダウンロードは約3.8万件になりました。
 
-# コードハイライト
-
-TypeScript のコード例:
-
-```ts {2-4|6-8|all}
-// コードハイライトの例
-interface User {
-  name: string
-  age: number
-}
-
-const user: User = {
-  name: 'Taro',
-  age: 25
-}
-
-console.log(user)
-```
-
-<v-click>
-
-system monospace で ligature を無効化して表示
-
-</v-click>
+https://rubygems.org/api/v1/gems/rfmt.json
+https://newsletter.shortruby.com/p/edition-165
+-->
 
 ---
 
-# compact code block
+# ccsession
 
-<div class="code-compact code-tight">
+AIエージェントの過去の会話を探して再開するCLI
 
-<div class="code-caption">src/generated/config.ts:12</div>
+- https://github.com/sorafujitani/ccsession
+- GitHub Releasesで配布バイナリが累計8,443ダウンロード
+- Articles
+  - [Claude Codeのセッション履歴をfzf検索 & previewする技術（ccsession）](https://zenn.dev/soramarjr/articles/4eb891ab20498e)
+  - [CLI派歓喜！Claude Code履歴検索のccsessionが便利](https://eiji.page/blog/ccsession-intro/)
 
-```ts {1-2}
-"feature/example"?: RuleNoConfig
-  | [Severity, FeatureExampleOptions]
-```
+<!--
+目安 1分10秒
 
-</div>
+前にどのプロジェクトで話したか忘れても、会話を横断して検索し、選んだセッションを元の作業場所から再開できます。
+5月に公開しました。Claude Code向けに作り始めて、CodexやOpenCodeなどでも使えるようにしました。
 
----
-
-# 生成コード紹介
-
-<div class="nested-compact">
-
-- 生成コマンド
-  - `bun run generate && bun run build`
-- 生成された型定義を短い抜粋で見せる
-  - `src/generated/config.ts`
-
-</div>
-
-<div class="code-compact code-tight">
-
-<div class="code-caption">src/generated/config.ts:12</div>
-
-```ts
-export interface GeneratedConfig {
-  featureExample?: FeatureExampleOptions
-}
-```
-
-</div>
-
----
-layout: two-cols
----
-
-# 2カラムレイアウト
-
-左側のコンテンツ
-
-- <EmojiText emoji="📝">ポイント1</EmojiText>
-- <EmojiText emoji="💡">ポイント2</EmojiText>
-- <EmojiText emoji="🎯">ポイント3</EmojiText>
-
-::right::
-
-# 右側
-
-右側のコンテンツ
-
-```js
-const greet = (name) => `Hello, ${name}!`
-console.log(greet('world'))
-```
+https://github.com/sorafujitani/ccsession
+https://eiji.page/blog/ccsession-intro/
+https://api.github.com/repos/sorafujitani/ccsession/releases?per_page=100
+-->
 
 ---
 
-<GradientHeading :animated="true">
-  グラデーション見出し
-</GradientHeading>
+# その他に作ったOSS
 
-アニメーション付きのグラデーション効果
+2026年に、ccsession以外にも32件のOSSリポジトリを作成
 
-<v-clicks>
+[skills](https://github.com/sorafujitani/skills)、[panopticon](https://github.com/sorafujitani/panopticon)、[rt](https://github.com/sorafujitani/rt) など
 
-- Purple to Blue のグラデーション
-- アニメーションするテキストシャドウ
-- oklch color space の活用
+<!--
+目安 30秒
 
-</v-clicks>
+ほかにも普段の開発で使うツールを作りました。たとえばpanopticonは、エージェントが実行したツールや、エラーが起きた箇所を振り返るためのものです。
+本人の公開・非forkリポジトリで、MITまたはApache-2.0のものを集計しています。
 
-<div class="code-compact">
-
-```css
-.gradient-heading {
-  background: linear-gradient(135deg,
-    oklch(0.65 0.25 270) 0%,
-    oklch(0.7 0.22 240) 50%,
-    oklch(0.75 0.2 210) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-```
-
-</div>
+https://api.github.com/users/sorafujitani/repos?per_page=100&sort=created&direction=desc&page=1
+-->
 
 ---
 
-# 画像表示
+# 他のOSSへの貢献
 
-<CenteredImage
-  src="https://placehold.co/800x400"
-  alt="サンプル画像"
-  width="800px"
-  caption="画像のキャプション"
-/>
+公開PRは29件、うち19件がマージ（共同開発を含む）
 
----
-layout: center
----
+- **Oxc**　OxlintにNode.js向けのルールを実装したり
+- **Hono**　言語判定で ja-JP から ja を選べるようにしたりテストを最新化したり
+- **Ruby**　Ruby PrismのBuildとRuboCopの自動修正を改善したり
+- **その他**　Mago、Yamada UI、ccgateなど
 
-# View Transition対応
+[PR・Issue一覧](https://sorafujitani.me/pulls/)
 
-<v-click>
+<!--
+目安 2分
 
-<div class="text-6xl emoji">
-🎬
-</div>
+OxcではOxlintにNode.js向けのルールを追加しました。Honoでは、たとえば日本向けの言語コードを受け取ったときに、日本語の設定を使えるようにしました。
+Ruby Prismはrfmtでも使っているライブラリです。rfmtを別の環境向けにビルドする際に見つけた問題を報告し、修正PRを出しました。
 
-</v-click>
+Oxc
+https://github.com/oxc-project/oxc/pull/23539
+https://github.com/oxc-project/oxc/pull/23589
 
-<v-click>
+Hono
+https://github.com/honojs/hono/pull/4717
 
-モダンブラウザのView Transition APIに対応しています
+Ruby
+https://github.com/ruby/prism/pull/4179
+https://github.com/rubocop/rubocop/pull/15101
 
-</v-click>
-
----
-layout: center
-class: text-center
----
-
-<GradientHeading class="text-4xl font-bold">see you later 👋</GradientHeading>
+PR・Issue一覧
+https://sorafujitani.me/pulls/
+-->
