@@ -26,6 +26,8 @@ jobs:
         with:
           bun-version: latest
       - run: bun install
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
       - run: bun run build -- --base /${{ github.event.repository.name }}/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
