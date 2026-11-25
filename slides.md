@@ -6,7 +6,7 @@ class: text-center
 drawings:
   persist: false
 transition: slide-left
-title: 2026年のOSS活動まとめ
+title: '2026年のOSS活動まとめ | TechBull mini LT&交流会 #5'
 fonts:
   provider: none
   sans: 'Noto Sans JP'
@@ -15,6 +15,7 @@ fonts:
 
 <CoverSlide
   title="2026年 OSS contribution まとめ"
+  subtitle="TechBull mini LT&交流会 #5"
   author="fujitani sora"
 />
 
@@ -84,31 +85,32 @@ https://api.github.com/repos/sorafujitani/ccsession/releases?per_page=100
 
 ---
 
-# その他に作ったOSS
+# 自作OSSの傾向
 
-2026年に、ccsession以外にも32件のOSSリポジトリを作成
-
-[skills](https://github.com/sorafujitani/skills)、[panopticon](https://github.com/sorafujitani/panopticon)、[rt](https://github.com/sorafujitani/rt) など
+- 2026年に32件のOSSリポジトリを作成
+- 主言語の内訳（リポジトリ数ベース）
+  - Rust 40.6%、TypeScript 25%、Go 18.8%、その他 15.6%
+- 公開リポジトリ全体でマージ済みPR 164件、コミット1,385件
 
 <!--
 目安 30秒
 
 ほかにも普段の開発で使うツールを作りました。たとえばpanopticonは、エージェントが実行したツールや、エラーが起きた箇所を振り返るためのものです。
-本人の公開・非forkリポジトリで、MITまたはApache-2.0のものを集計しています。
+2026年11月24日までに作成した本人の公開・非forkリポジトリのうち、ccsessionを除くMIT・Apache-2.0の32件を対象にしています。
+GitHubで主言語の判定がない8件をRustに加え、Rust 13件、TypeScript 8件、Go 6件としています。その他はHTML、JavaScript、MoonBit、Python、Swiftが各1件です。
+活動件数は、ライセンスの有無を問わず、本人所有の公開・非forkの161リポジトリについて、2026年1月1日から11月24日まで（日本時間）を集計しています。PRは期間内のマージを数え、コミットは各リポジトリのデフォルトブランチの履歴を合算しました。
 
 https://api.github.com/users/sorafujitani/repos?per_page=100&sort=created&direction=desc&page=1
 -->
 
 ---
 
-# 他のOSSへの貢献
-
-公開PRは29件、うち19件がマージ（共同開発を含む）
+# Contributions to Other OSS
 
 - **Oxc**　OxlintにNode.js向けのルールを実装したり
 - **Hono**　言語判定で ja-JP から ja を選べるようにしたりテストを最新化したり
 - **Ruby**　Ruby PrismのBuildとRuboCopの自動修正を改善したり
-- **その他**　Mago、Yamada UI、ccgateなど
+- その他もろもろ
 
 [PR・Issue一覧](https://sorafujitani.me/pulls/)
 
@@ -132,3 +134,7 @@ https://github.com/rubocop/rubocop/pull/15101
 PR・Issue一覧
 https://sorafujitani.me/pulls/
 -->
+
+---
+
+![Pullsページに並ぶリポジトリ一覧](./assets/pulls-overview.png)

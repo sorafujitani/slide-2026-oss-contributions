@@ -14,10 +14,12 @@
 - **GitHub Releasesの配布バイナリは累計約8,400ダウンロード**（8,443件）。<https://api.github.com/repos/sorafujitani/ccsession/releases?per_page=100>
 - 7月6日にeiji.pageで紹介。<https://eiji.page/blog/ccsession-intro/>
 
-## 3. その他に作ったOSS
+## 3. 自作OSSの傾向
 
 - **2026年に、ccsession以外にも32のOSSリポジトリを作成。** 例は `skills`、`panopticon`、`rt`。<https://github.com/sorafujitani?tab=repositories>
 - 集計はGitHubの本人アカウントで、2026年作成・公開・非fork・ライセンスがMITまたはApache-2.0と確認できたもの。計33件からccsessionを除いた。2025年に始めたrfmtは年次集計の範囲外。<https://api.github.com/users/sorafujitani/repos?per_page=100&sort=created&direction=desc&page=1>
+- GitHubの主言語で判定なしの8件をRustに加えて集計。Rust 13件（40.6%）、TypeScript 8件（25%）、Go 6件（18.8%）、その他5件（15.6%）。その他はHTML、JavaScript、MoonBit、Python、Swiftが各1件。
+- 本人所有の公開・非forkの161リポジトリで、2026年1月1日〜11月24日（日本時間）に**164件のPRがマージ**され、**コミットは1,385件**。ライセンスの有無を問わず、PRはマージ日で、コミットは各デフォルトブランチの履歴で集計した。<https://api.github.com/users/sorafujitani/repos?per_page=100> · <https://docs.github.com/en/graphql/reference/commits>
 
 ## 4. 他のOSSへの貢献
 
