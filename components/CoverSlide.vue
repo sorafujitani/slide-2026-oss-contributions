@@ -109,7 +109,7 @@ const props = withDefaults(defineProps<Props>(), {
 .cover-slide .cover-title {
   margin-bottom: 0;
   margin-inline: 0;
-  font-size: clamp(1.4rem, 2.7vw, 2rem) !important;
+  font-size: clamp(1.5rem, 3vw, 2.2rem) !important;
   font-weight: 800;
   line-height: 1.16;
   letter-spacing: -0.02em;
@@ -118,7 +118,8 @@ const props = withDefaults(defineProps<Props>(), {
 }
 
 .cover-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: clamp(1.1rem, 2.6vw, 1.375rem);
+  font-weight: 600;
   line-height: 1.6;
 }
 
@@ -127,7 +128,7 @@ const props = withDefaults(defineProps<Props>(), {
 }
 
 .cover-meta {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-align: center;
   color: var(--color-text-muted);

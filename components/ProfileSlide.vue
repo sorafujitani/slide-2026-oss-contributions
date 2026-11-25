@@ -122,7 +122,7 @@ const profileItems = computed(() => [
 
 .profile-name {
   margin: 0 0 1.6rem;
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-size: clamp(1.8rem, 3.25vw, 2.55rem);
   line-height: 1.12;
   letter-spacing: 0;
 }
@@ -141,8 +141,8 @@ const profileItems = computed(() => [
   max-width: 100%;
   color: var(--color-text);
   border-bottom: 0 !important;
-  font-size: clamp(0.98rem, 1.6vw, 1.16rem);
-  font-weight: 650;
+  font-size: clamp(1.05rem, 1.75vw, 1.25rem);
+  font-weight: 700;
   line-height: 1.35;
   text-decoration: none;
   overflow-wrap: anywhere;

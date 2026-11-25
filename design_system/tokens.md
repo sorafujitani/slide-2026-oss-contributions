@@ -118,10 +118,10 @@ font-feature-settings: "liga" 0, "calt" 0;
 
 | 要素 | サイズ (clamp) | 用途 |
 |------|---------------|------|
-| h1 | `clamp(1.8rem, 4vw, 2.8rem)` | 主見出し |
+| h1 | `clamp(1.95rem, 4.25vw, 3rem)` | 主見出し |
 | h2 | `clamp(1.4rem, 3.2vw, 2rem)` | 副見出し |
 | h3 | `clamp(1.2rem, 2.6vw, 1.6rem)` | 小見出し |
-| p, li | `clamp(1.1rem, 2vw, 1.3rem)` | 本文 |
+| p, li | `clamp(1.2rem, 2.2vw, 1.4rem)` | 本文 |
 | small | `0.875rem` | キャプション |
 
 **clamp の利点**: レスポンシブに対応し、画面サイズに応じて適切なサイズに調整されます
@@ -133,7 +133,7 @@ font-feature-settings: "liga" 0, "calt" 0;
 | Extra Bold | 800 | h1 見出し |
 | Bold | 700 | h2 見出し |
 | Semi Bold | 600 | h3 見出し |
-| Regular | 400 | 本文 |
+| Medium | 500 | 本文 |
 
 ### 行間 (line-height)
 
